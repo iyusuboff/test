@@ -13,7 +13,6 @@ pipeline {
     stages {
 
         stage('Helm Test') {
-            agent { docker 'maven:3-alpine' }
             steps {
                 echo 'Hello, Helm'
                 sh 'helm --version'
