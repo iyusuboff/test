@@ -12,31 +12,9 @@ pipeline {
 
     stages {
 
-        stage('Helm Test') {
+        stage('Gradle Build') {
             steps {
-                echo 'Hello, Helm'
-                sh 'helm version'
-            }
-        }
-
-        stage('Gradle Test') {
-            steps {
-                echo 'Hello, Java'
-                sh 'java --version'
-            }
-        }
-
-        stage('Gcloud Test') {
-            steps {
-                echo 'Hello, Gcloud'
-                sh 'gcloud --version'
-            }
-        }
-
-        stage('Kuectl Test') {
-            steps {
-                echo 'Hello, Kubectl'
-                sh 'kubectl version'
+                sh './gradlew build'
             }
         }
     }
