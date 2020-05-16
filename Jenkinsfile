@@ -15,28 +15,28 @@ pipeline {
         stage('Helm Test') {
             steps {
                 echo 'Hello, Helm'
-                sh 'helm --version'
+                sh 'helm version'
             }
         }
 
         stage('Gradle Test') {
             steps {
                 echo 'Hello, Java'
-                sh 'java -version'
+                sh 'java --version'
             }
         }
 
         stage('Gcloud Test') {
             steps {
                 echo 'Hello, Gcloud'
-                sh 'gcloud -version'
+                sh 'gcloud --version'
             }
         }
 
         stage('Kuectl Test') {
             steps {
                 echo 'Hello, Kubectl'
-                sh 'kubectl -version'
+                sh 'kubectl version'
             }
         }
     }
